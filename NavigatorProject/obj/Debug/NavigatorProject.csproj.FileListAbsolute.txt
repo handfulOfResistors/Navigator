@@ -1,0 +1,17 @@
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\NavigatorProject.exe.config
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\NavigatorProject.exe
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\NavigatorProject.pdb
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EntityFramework.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EntityFramework.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.csproj.AssemblyReference.cache
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.Properties.Resources.resources
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.csproj.GenerateResource.cache
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\Navigato.F19F5156.Up2Date
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.exe
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.pdb
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.Migrations.InitialCreate.resources
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.NoviKandidatForma.resources
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.PocetnaForma.resources

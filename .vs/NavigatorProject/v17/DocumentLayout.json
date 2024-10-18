@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\novikandidatforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\novikandidatforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\model\\statuskandidata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\model\\statuskandidata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\model\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\model\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Kandidat.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\Kandidat.cs",
+              "RelativeDocumentMoniker": "NavigatorProject\\Model\\Kandidat.cs",
+              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\Kandidat.cs",
+              "RelativeToolTip": "NavigatorProject\\Model\\Kandidat.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwC0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T09:57:58.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StatusKandidata.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\StatusKandidata.cs",
+              "RelativeDocumentMoniker": "NavigatorProject\\Model\\StatusKandidata.cs",
+              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\StatusKandidata.cs",
+              "RelativeToolTip": "NavigatorProject\\Model\\StatusKandidata.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T09:51:52.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NoviKandidatForma.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\NoviKandidatForma.cs",
+              "RelativeDocumentMoniker": "NavigatorProject\\NoviKandidatForma.cs",
+              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\NoviKandidatForma.cs",
+              "RelativeToolTip": "NavigatorProject\\NoviKandidatForma.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAswFQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T07:25:11.367Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
