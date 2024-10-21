@@ -24,18 +24,7 @@ namespace NavigatorProject
 
         private void DodajKandidata_Click(object sender, EventArgs e)
         {
-            ////ovde odraditi jedan upis u bazu za sliku i za pdf
-            //byte[] ss = File.ReadAllBytes("C:\\Users\\Nemanja Pesic\\Downloads\\image.png");
-
-            //using (var context = new ApplicationDbContext())
-            //{
-            //    // Assume you're updating or adding a specific 'Kandidat'
-            //    var kandidat = context.Kandidati.Find(3);  // Find by ID or another criteria
-
-            //    kandidat.Slika = ss;  // Assign the byte array to the PrilogCV property
-
-            //    context.SaveChanges();  // Save changes to the database
-            //}
+            
 
             using (var novaForma = new NoviKandidatForma())
             {
@@ -43,16 +32,24 @@ namespace NavigatorProject
             }
         }
 
-        private void PocetnaForma_Load(object sender, EventArgs e)
-        {
-            
-
-        }
+        
 
         private void PocetnaForma_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'navigatorDBDataSet.Kandidats' table. You can move, or remove it, as needed.
-            
+            LoadData();
+
+        }
+        private void LoadData()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+
+                var kandidati = context.Kandidati.ToList();
+                
+
+                
+                PocetnaStranicadataGridView.DataSource = kandidati;
+            }
 
         }
     }

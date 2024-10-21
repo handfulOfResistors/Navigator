@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -76,6 +78,7 @@ namespace NavigatorProject
             kandidat.PrilogCV = cvBytes;
             kandidat.Slika = pictureBytes;
             kandidat.Ocena = OcenacomboBox.SelectedIndex; // ovo je index to je valjda ok
+            
 
             string selectedStatus = StatuscomboBox.SelectedItem.ToString();
 
@@ -83,11 +86,37 @@ namespace NavigatorProject
             if (Enum.TryParse(selectedStatus, out StatusKandidata status))
             {
                 kandidat.Status = status; 
+                
             }
             else
             {
                 MessageBox.Show("Izabrani status nije validan."); 
             }
+
+            using (var context = new ApplicationDbContext()) 
+            {
+                context.Kandidati.Add(kandidat);
+                try
+                {
+                    context.SaveChanges();
+                    MessageBox.Show("Kandidat uspešno dodat u bazu.");
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var validationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            MessageBox.Show($"Property: {validationError.PropertyName} - Error: {validationError.ErrorMessage}");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Došlo je do greške: " + ex.Message);
+                }
+            }
+
 
 
         }

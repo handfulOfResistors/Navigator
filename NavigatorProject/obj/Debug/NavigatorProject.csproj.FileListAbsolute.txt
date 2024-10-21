@@ -15,3 +15,20 @@ C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\
 C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.Migrations.InitialCreate.resources
 C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.NoviKandidatForma.resources
 C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.PocetnaForma.resources
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\NavigatorProject.exe.config
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\NavigatorProject.exe
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\NavigatorProject.pdb
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\EntityFramework.dll
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\EntityFramework.xml
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.NoviKandidatForma.resources
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.PocetnaForma.resources
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.Migrations.InitialCreate.resources
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.Properties.Resources.resources
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\Navigato.F19F5156.Up2Date
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.exe
+C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.pdb
