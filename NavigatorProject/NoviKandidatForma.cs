@@ -5,10 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.Validation;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.ExceptionServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,10 +33,11 @@ namespace NavigatorProject
         public NoviKandidatForma()
         {
             InitializeComponent();
+            
             CVAddedStatus.Text="";
             PictureAddedStatus.Text="";
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -77,7 +80,7 @@ namespace NavigatorProject
             kandidat.Napomena= NapomenaBox.Text;    
             kandidat.PrilogCV = cvBytes;
             kandidat.Slika = pictureBytes;
-            kandidat.Ocena = OcenacomboBox.SelectedIndex; // ovo je index to je valjda ok
+            kandidat.Ocena = OcenacomboBox.SelectedIndex + 1; // ovo je index to je valjda ok
             
 
             string selectedStatus = StatuscomboBox.SelectedItem.ToString();
@@ -120,5 +123,15 @@ namespace NavigatorProject
 
 
         }
+
+        private void NoviKandidatForma_Load(object sender, EventArgs e)
+        {
+            
+            PoslednjaIzmenaTimePicker.Format = DateTimePickerFormat.Custom;
+            PoslednjaIzmenaTimePicker.CustomFormat = "dd.MM.yyyy";
+        }
+
+
+
     }
 }

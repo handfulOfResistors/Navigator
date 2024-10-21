@@ -110,7 +110,7 @@
             // 
             this.PoslednjaIzmenaTimePicker.Location = new System.Drawing.Point(26, 335);
             this.PoslednjaIzmenaTimePicker.Name = "PoslednjaIzmenaTimePicker";
-            this.PoslednjaIzmenaTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.PoslednjaIzmenaTimePicker.Size = new System.Drawing.Size(100, 20);
             this.PoslednjaIzmenaTimePicker.TabIndex = 7;
             // 
             // button1
@@ -246,7 +246,7 @@
             "Intervju",
             "Uži krug",
             "Zaposlen"});
-            this.StatuscomboBox.Location = new System.Drawing.Point(29, 503);
+            this.StatuscomboBox.Location = new System.Drawing.Point(26, 502);
             this.StatuscomboBox.Name = "StatuscomboBox";
             this.StatuscomboBox.Size = new System.Drawing.Size(121, 21);
             this.StatuscomboBox.TabIndex = 21;
@@ -309,6 +309,7 @@
             this.Controls.Add(this.ImeBox);
             this.Name = "NoviKandidatForma";
             this.Text = "NoviKandidatForma";
+            this.Load += new System.EventHandler(this.NoviKandidatForma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

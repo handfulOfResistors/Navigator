@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\novikandidatforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\novikandidatforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\model\\statuskandidata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\model\\statuskandidata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\model\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\model\\kandidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,42 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Kandidat.cs",
-              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\Kandidat.cs",
-              "RelativeDocumentMoniker": "NavigatorProject\\Model\\Kandidat.cs",
-              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\Kandidat.cs",
-              "RelativeToolTip": "NavigatorProject\\Model\\Kandidat.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwC0AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PocetnaForma.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs",
+              "RelativeDocumentMoniker": "NavigatorProject\\PocetnaForma.cs",
+              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs*",
+              "RelativeToolTip": "NavigatorProject\\PocetnaForma.cs*",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAwFUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T09:57:58.438Z",
+              "WhenOpened": "2024-10-21T09:17:30.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StatusKandidata.cs",
-              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\StatusKandidata.cs",
-              "RelativeDocumentMoniker": "NavigatorProject\\Model\\StatusKandidata.cs",
-              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Model\\StatusKandidata.cs",
-              "RelativeToolTip": "NavigatorProject\\Model\\StatusKandidata.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "PocetnaForma.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs",
+              "RelativeDocumentMoniker": "NavigatorProject\\PocetnaForma.cs",
+              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs [Design]*",
+              "RelativeToolTip": "NavigatorProject\\PocetnaForma.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T09:51:52.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NoviKandidatForma.cs",
-              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\NoviKandidatForma.cs",
-              "RelativeDocumentMoniker": "NavigatorProject\\NoviKandidatForma.cs",
-              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\NoviKandidatForma.cs*",
-              "RelativeToolTip": "NavigatorProject\\NoviKandidatForma.cs*",
-              "ViewState": "AgIAAEIAAAAAAAAAAADwv1kAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T07:25:11.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T09:17:27.033Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

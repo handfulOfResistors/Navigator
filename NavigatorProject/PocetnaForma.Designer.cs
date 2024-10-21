@@ -38,10 +38,9 @@
             // 
             // DodajKandidataButton
             // 
-            this.DodajKandidataButton.Location = new System.Drawing.Point(1621, 651);
-            this.DodajKandidataButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DodajKandidataButton.Location = new System.Drawing.Point(1216, 529);
             this.DodajKandidataButton.Name = "DodajKandidataButton";
-            this.DodajKandidataButton.Size = new System.Drawing.Size(195, 44);
+            this.DodajKandidataButton.Size = new System.Drawing.Size(146, 36);
             this.DodajKandidataButton.TabIndex = 0;
             this.DodajKandidataButton.Text = "Dodaj Kandidata";
             this.DodajKandidataButton.UseVisualStyleBackColor = true;
@@ -54,21 +53,20 @@
             // PocetnaStranicadataGridView
             // 
             this.PocetnaStranicadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PocetnaStranicadataGridView.Location = new System.Drawing.Point(68, 57);
-            this.PocetnaStranicadataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PocetnaStranicadataGridView.Location = new System.Drawing.Point(51, 46);
             this.PocetnaStranicadataGridView.Name = "PocetnaStranicadataGridView";
             this.PocetnaStranicadataGridView.RowHeadersWidth = 51;
-            this.PocetnaStranicadataGridView.Size = new System.Drawing.Size(1725, 226);
+            this.PocetnaStranicadataGridView.Size = new System.Drawing.Size(1294, 184);
             this.PocetnaStranicadataGridView.TabIndex = 1;
+            this.PocetnaStranicadataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PocetnaStranicadataGridView_CellClick);
             // 
             // PocetnaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1908, 750);
+            this.ClientSize = new System.Drawing.Size(1431, 609);
             this.Controls.Add(this.PocetnaStranicadataGridView);
             this.Controls.Add(this.DodajKandidataButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PocetnaForma";
             this.Text = "Pocetna Stranica";
             this.Load += new System.EventHandler(this.PocetnaForma_Load_1);
