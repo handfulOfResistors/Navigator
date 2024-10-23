@@ -72,68 +72,46 @@ namespace NavigatorProject
             return (Image)(new Bitmap(imgToResize, size));
         }
 
-        private void PocetnaStranicadataGridView_CellClick(object sender, DataGridViewCellEventArgs e) // ovu liniju treba izmeniti jer ne upisuje pravu vrednost u tempPDF
+        private void PocetnaStranicadataGridView_CellClick(object sender, DataGridViewCellEventArgs e) 
         {
-            
-            if (e.ColumnIndex == 9)
+            Kandidat newKand;
+            var kandidat = PocetnaStranicadataGridView.Rows[e.RowIndex].DataBoundItem as Kandidat;
+            int kandId = kandidat.Id;
+            ////////////////////////////////////////Klik na sliku radi kako sam zamislio
+            if (e.ColumnIndex == 10)
             {
-                var kandidat = PocetnaStranicadataGridView.Rows[e.RowIndex].DataBoundItem as Kandidat;
-                int kandId = kandidat.Id;
-                
-                if(kandidat.PrilogCV != null)
+                using (var context = new ApplicationDbContext())
+                {
+                    newKand = context.Kandidati.FirstOrDefault(k=>k.Id == kandId);
+                    MessageBox.Show($"Veličina PrilogCV: {newKand.PrilogCV.Length} bajtova");   
+                }
+                if(newKand.Slika != null) 
                 {
                     try
                     {
-                        string tempFilePath = Path.Combine(Path.GetTempPath(), "tempCV.pdf");
-                        File.WriteAllBytes(tempFilePath, );
+                        string tempFilePath = Path.Combine(Path.GetTempPath(), "tempPicture.png");
+                        File.WriteAllBytes(tempFilePath, newKand.Slika);
                         if (File.Exists(tempFilePath))
                         {
-                            MessageBox.Show("PDF fajl je uspešno snimljen na: " + tempFilePath);
+                            MessageBox.Show("Slika je uspešno snimljena na: " + tempFilePath);
                             System.Diagnostics.Process.Start(tempFilePath); 
                         }
                         else
                         {
-                            MessageBox.Show("PDF fajl nije uspešno snimljen.");
+                            MessageBox.Show("Slika nije uspešno snimljena.");
                         }
                         System.Diagnostics.Process.Start(tempFilePath);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Doslo je do greske prilikom otvaranja PDF dokumenta " + ex.Message);
+                        MessageBox.Show("Doslo je do greske prilikom otvaranja Slike " + ex.Message);
                     }
                 }
+            }
+            if(e.ColumnIndex == 9)
+            {
 
             }
-
         }
     }
 }
-//private void PocetnaStranicadataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-//{
-//    if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-//    {
-//        var kandidat = PocetnaStranicadataGridView.Rows[e.RowIndex].DataBoundItem as Kandidat;
-
-//        // Ako je kliknuta kolona PrilogCV, otvori PDF
-//        if (PocetnaStranicadataGridView.Columns[e.ColumnIndex].Name == "PrilogCV")
-//        {
-//            if (kandidat.PrilogCV != null)
-//            {
-//                string tempFilePath = Path.Combine(Path.GetTempPath(), "tempCV.pdf");
-//                File.WriteAllBytes(tempFilePath, kandidat.PrilogCV);
-//                System.Diagnostics.Process.Start(tempFilePath);
-//            }
-//        }
-
-//        // Ako je kliknuta kolona Slika, otvori sliku
-//        else if (PocetnaStranicadataGridView.Columns[e.ColumnIndex].Name == "Slika")
-//        {
-//            if (kandidat.Slika != null)
-//            {
-//                string tempFilePath = Path.Combine(Path.GetTempPath(), "tempImage.jpg");
-//                File.WriteAllBytes(tempFilePath, kandidat.Slika);
-//                System.Diagnostics.Process.Start(tempFilePath);
-//            }
-//        }
-//    }
-//}
