@@ -85,15 +85,18 @@ namespace NavigatorProject
 
             string selectedStatus = StatuscomboBox.SelectedItem.ToString();
 
-            // Pokušaj da konvertuješ izabranu vrednost u StatusKandidata enum
-            if (Enum.TryParse(selectedStatus, out StatusKandidata status))
+            if (selectedStatus == "Uži krug") 
             {
-                kandidat.Status = status; 
-                
+                selectedStatus = "UziKrug";
+                if (Enum.TryParse(selectedStatus, out StatusKandidata status))
+                {
+                    kandidat.Status = status;
+
+                }
             }
             else
             {
-                MessageBox.Show("Izabrani status nije validan."); 
+                MessageBox.Show("Izabrani status nije validan.");
             }
 
             using (var context = new ApplicationDbContext()) 
@@ -103,6 +106,7 @@ namespace NavigatorProject
                 {
                     context.SaveChanges();
                     MessageBox.Show("Kandidat uspešno dodat u bazu.");
+                    
                 }
                 catch (DbEntityValidationException ex)
                 {

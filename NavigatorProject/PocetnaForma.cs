@@ -28,13 +28,16 @@ namespace NavigatorProject
 
             using (var novaForma = new NoviKandidatForma())
             {
-                novaForma.ShowDialog(); // Prikazuje novu formu kao modal
+                novaForma.FormClosed += (s, args) => LoadData();
+                novaForma.ShowDialog(); 
             }
+            
+            
         }
 
         
 
-        private void PocetnaForma_Load_1(object sender, EventArgs e)
+        public void PocetnaForma_Load_1(object sender, EventArgs e)
         {
 
             LoadData();
@@ -46,7 +49,7 @@ namespace NavigatorProject
             {
                 var kandidati = context.Kandidati.ToList();
                 PocetnaStranicadataGridView.DataSource = kandidati;
-                ////////////////////////////////promena postojecih kolona da prikazuju ikone
+                
                 foreach(DataGridViewRow row in PocetnaStranicadataGridView.Rows)
                 {
                     Size newSize = new Size(25,25);
@@ -83,7 +86,6 @@ namespace NavigatorProject
                 using (var context = new ApplicationDbContext())
                 {
                     newKand = context.Kandidati.FirstOrDefault(k=>k.Id == kandId);
-                    MessageBox.Show($"Veličina PrilogCV: {newKand.PrilogCV.Length} bajtova");   
                 }
                 if(newKand.Slika != null) 
                 {
@@ -100,7 +102,7 @@ namespace NavigatorProject
                         {
                             MessageBox.Show("Slika nije uspešno snimljena.");
                         }
-                        System.Diagnostics.Process.Start(tempFilePath);
+                        
                     }
                     catch (Exception ex)
                     {
@@ -110,8 +112,77 @@ namespace NavigatorProject
             }
             if(e.ColumnIndex == 9)
             {
+                using (var context = new ApplicationDbContext())
+                {
+                    newKand = context.Kandidati.FirstOrDefault(k => k.Id == kandId);
+                }
+                if (newKand.PrilogCV != null)
+                {
+                    try
+                    {
+                        string downloadPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),"Downloads", "Kandidat - CV.pdf");
+                        File.WriteAllBytes(downloadPath,newKand.PrilogCV);
+                        ///////////////
+                        if (File.Exists(downloadPath))
+                        {
+                            
+                            System.Diagnostics.Process.Start(downloadPath);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("cv nije uspešno preuzet.");
+                        }
+                        
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Doslo je do greske prilikom cuvanja  " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string tekst = TekstZaPretragutextBox.Text;
+            int brojJMBG;
+
+            if (int.TryParse(tekst,out brojJMBG))
+            {
+                List<Kandidat> kandidatiSaJMBG;
+                using (var context = new ApplicationDbContext())
+                {
+                    string Jm = brojJMBG.ToString();
+                    kandidatiSaJMBG = context.Kandidati
+                        .Where(k=>k.JMBG == Jm) .ToList();
+                    
+                }
+                PocetnaStranicadataGridView.DataSource = kandidatiSaJMBG;
+                foreach (DataGridViewRow row in PocetnaStranicadataGridView.Rows)
+                {
+                    Size newSize = new Size(25, 25);
+                    var kandidatl = row.DataBoundItem as Kandidat;
+                    if (kandidatl.PrilogCV != null)
+                    {
+                        row.Cells["PrilogCV"].Value = ResizeImage(Properties.Resources.pdf, newSize);
+                    }
+                    if (kandidatl.Slika != null)
+                    {
+                        row.Cells["Slika"].Value = ResizeImage(Properties.Resources.pic, newSize);
+                    }
+                }
+
 
             }
+            else 
+            {
+                LoadData();
+            }
+            
+
+
         }
     }
 }
