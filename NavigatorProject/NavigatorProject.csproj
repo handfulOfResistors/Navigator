@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IzmenaKandidataForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmenaKandidataForma.Designer.cs">
+      <DependentUpon>IzmenaKandidataForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="NoviKandidatForma.cs">
       <SubType>Form</SubType>
     </Compile>

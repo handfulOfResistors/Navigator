@@ -49,8 +49,9 @@ namespace NavigatorProject
             {
                 var kandidati = context.Kandidati.ToList();
                 PocetnaStranicadataGridView.DataSource = kandidati;
-                
-                foreach(DataGridViewRow row in PocetnaStranicadataGridView.Rows)
+                PocetnaStranicadataGridView.Columns["Id"].Visible = false;
+
+                foreach (DataGridViewRow row in PocetnaStranicadataGridView.Rows)
                 {
                     Size newSize = new Size(25,25);
                     var kandidat = row.DataBoundItem as Kandidat;
@@ -147,9 +148,13 @@ namespace NavigatorProject
         private void button1_Click(object sender, EventArgs e)
         {
             string tekst = TekstZaPretragutextBox.Text;
-            int brojJMBG;
+            long brojJMBG;
 
-            if (int.TryParse(tekst,out brojJMBG))
+            if (tekst == "")
+            {
+                LoadData();
+            }
+            else if (long.TryParse(tekst,out brojJMBG))
             {
                 List<Kandidat> kandidatiSaJMBG;
                 using (var context = new ApplicationDbContext())
@@ -178,11 +183,68 @@ namespace NavigatorProject
             }
             else 
             {
-                LoadData();
+                List<Kandidat> kandidatiSaImenomIliPrezimenom;
+                using (var context = new ApplicationDbContext()) 
+                {
+                    kandidatiSaImenomIliPrezimenom = context.Kandidati
+                        .Where(k => k.Ime == tekst || k.Prezime ==tekst ).ToList();
+                }
+
+                PocetnaStranicadataGridView.DataSource = kandidatiSaImenomIliPrezimenom;
+                foreach (DataGridViewRow row in PocetnaStranicadataGridView.Rows)
+                {
+                    Size newSize = new Size(25, 25);
+                    var kandidatl = row.DataBoundItem as Kandidat;
+                    if (kandidatl.PrilogCV != null)
+                    {
+                        row.Cells["PrilogCV"].Value = ResizeImage(Properties.Resources.pdf, newSize);
+                    }
+                    if (kandidatl.Slika != null)
+                    {
+                        row.Cells["Slika"].Value = ResizeImage(Properties.Resources.pic, newSize);
+                    }
+                }
+
             }
+            
             
 
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if(PocetnaStranicadataGridView.SelectedRows.Count == 1)
+            {
+                DataGridViewRow selectedRow = PocetnaStranicadataGridView.SelectedRows[0];
+                
+                Kandidat KandidatZaIzmenu = new Kandidat();
+                var c = selectedRow.Cells[0].Value.ToString();
+                int.TryParse(c, out int KandidatZaIzm);
+                KandidatZaIzmenu.Id = KandidatZaIzm;
+                //KandidatZaIzmenu.Ime = selectedRow.Cells[1].Value.ToString();
+                //KandidatZaIzmenu.Prezime = selectedRow.Cells[2].Value.ToString();   
+                //KandidatZaIzmenu.JMBG = selectedRow.Cells[3].Value.ToString();
+                //var cc = selectedRow.Cells[4].Value;
+                //DateTime.TryParse(cc.ToString(), out DateTime datumRodj);
+                //KandidatZaIzmenu.DatumRodjenja = datumRodj;
+                //KandidatZaIzmenu.Email = selectedRow.Cells[5].Value.ToString();
+                //ovde treba dodati nove. Ili je moguce samo otvoriti novu formu sa svim novim podacima za kandidata gde se prilikom kliktanja na sacuvaj
+                //kandidat upisuje na mesto ovog starog u zavisnosti od Id
+
+                //using (var novaForma = new NoviKandidatForma())
+                //{
+                //    novaForma.FormClosed += (s, args) => LoadData();
+                //    novaForma.ShowDialog();
+                //}
+                
+                IzmenaKandidataForma izmenaKandidataForma = new IzmenaKandidataForma();
+                izmenaKandidataForma.ShowDialog();
+
+
+
+
+            }
         }
     }
 }

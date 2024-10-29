@@ -22,7 +22,9 @@ namespace NavigatorProject
     }
 }
 
+
 //status nesto ne radi kako treba, izbacuje status nije validan.
 //Dodatni Linkovi popraviti. Ne postoji u bazi a u modelu ga ima
 //istorija promena statusa kandidata napraviti da radi
 //Poslati mail sa pitanjem Datum i vreme izmene podataka(last_update) i Istorija promena statusa kandidata koja je razlika. Ako pre toga sam ne mogu da zakljucim
+//pretraga za sad radi ako trazimo celo ime prezime ili ceo jmbg
