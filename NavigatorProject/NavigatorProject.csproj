@@ -85,6 +85,9 @@
     <Compile Include="Model\StatusKandidata.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IzmenaKandidataForma.resx">
+      <DependentUpon>IzmenaKandidataForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NoviKandidatForma.resx">
       <DependentUpon>NoviKandidatForma.cs</DependentUpon>
     </EmbeddedResource>

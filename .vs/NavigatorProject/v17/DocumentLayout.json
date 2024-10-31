@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|c:\\users\\nemanja pesic\\source\\repos\\navigatorproject\\navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\pocetnaforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\navigatorproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897A52D6-A5C2-4770-B7A2-322AD2C0247B}|NavigatorProject\\NavigatorProject.csproj|solutionrelative:navigatorproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PocetnaForma.cs",
-              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs",
-              "RelativeDocumentMoniker": "NavigatorProject\\PocetnaForma.cs",
-              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs",
-              "RelativeToolTip": "NavigatorProject\\PocetnaForma.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAmwEoAAACrAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Program.cs",
+              "RelativeDocumentMoniker": "NavigatorProject\\Program.cs",
+              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\Program.cs",
+              "RelativeToolTip": "NavigatorProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T09:17:30.3Z",
+              "WhenOpened": "2024-10-28T12:19:43.16Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PocetnaForma.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs",
-              "RelativeDocumentMoniker": "NavigatorProject\\PocetnaForma.cs",
-              "ToolTip": "C:\\Users\\Nemanja Pesic\\source\\repos\\NavigatorProject\\NavigatorProject\\PocetnaForma.cs [Design]",
-              "RelativeToolTip": "NavigatorProject\\PocetnaForma.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T09:17:27.033Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

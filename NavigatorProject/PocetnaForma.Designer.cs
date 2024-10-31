@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PocetnaForma));
             this.DodajKandidataButton = new System.Windows.Forms.Button();
             this.kandidatsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PocetnaStranicadataGridView = new System.Windows.Forms.DataGridView();
@@ -36,15 +37,17 @@
             this.DugmeZaPretragubutton = new System.Windows.Forms.Button();
             this.TekstZaPretragutextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kandidatsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PocetnaStranicadataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // DodajKandidataButton
             // 
-            this.DodajKandidataButton.Location = new System.Drawing.Point(1216, 529);
+            this.DodajKandidataButton.Location = new System.Drawing.Point(1106, 529);
             this.DodajKandidataButton.Name = "DodajKandidataButton";
-            this.DodajKandidataButton.Size = new System.Drawing.Size(146, 36);
+            this.DodajKandidataButton.Size = new System.Drawing.Size(185, 79);
             this.DodajKandidataButton.TabIndex = 0;
             this.DodajKandidataButton.Text = "Dodaj Kandidata";
             this.DodajKandidataButton.UseVisualStyleBackColor = true;
@@ -60,7 +63,7 @@
             this.PocetnaStranicadataGridView.Location = new System.Drawing.Point(51, 46);
             this.PocetnaStranicadataGridView.Name = "PocetnaStranicadataGridView";
             this.PocetnaStranicadataGridView.RowHeadersWidth = 51;
-            this.PocetnaStranicadataGridView.Size = new System.Drawing.Size(1311, 396);
+            this.PocetnaStranicadataGridView.Size = new System.Drawing.Size(1240, 396);
             this.PocetnaStranicadataGridView.TabIndex = 1;
             this.PocetnaStranicadataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PocetnaStranicadataGridView_CellClick);
             // 
@@ -75,7 +78,7 @@
             // 
             // DugmeZaPretragubutton
             // 
-            this.DugmeZaPretragubutton.Location = new System.Drawing.Point(1286, 16);
+            this.DugmeZaPretragubutton.Location = new System.Drawing.Point(1216, 16);
             this.DugmeZaPretragubutton.Name = "DugmeZaPretragubutton";
             this.DugmeZaPretragubutton.Size = new System.Drawing.Size(75, 23);
             this.DugmeZaPretragubutton.TabIndex = 3;
@@ -85,26 +88,36 @@
             // 
             // TekstZaPretragutextBox
             // 
-            this.TekstZaPretragutextBox.Location = new System.Drawing.Point(1176, 16);
+            this.TekstZaPretragutextBox.Location = new System.Drawing.Point(1106, 16);
             this.TekstZaPretragutextBox.Name = "TekstZaPretragutextBox";
             this.TekstZaPretragutextBox.Size = new System.Drawing.Size(100, 20);
             this.TekstZaPretragutextBox.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1021, 529);
+            this.button1.Location = new System.Drawing.Point(502, 529);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 35);
+            this.button1.Size = new System.Drawing.Size(177, 79);
             this.button1.TabIndex = 5;
             this.button1.Text = "Izmeni Kandidata";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 448);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(213, 219);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // PocetnaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1496, 611);
+            this.ClientSize = new System.Drawing.Size(1341, 691);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TekstZaPretragutextBox);
             this.Controls.Add(this.DugmeZaPretragubutton);
@@ -116,6 +129,7 @@
             this.Load += new System.EventHandler(this.PocetnaForma_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.kandidatsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PocetnaStranicadataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +159,7 @@
         private System.Windows.Forms.Button DugmeZaPretragubutton;
         private System.Windows.Forms.TextBox TekstZaPretragutextBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -217,33 +217,27 @@ namespace NavigatorProject
             if(PocetnaStranicadataGridView.SelectedRows.Count == 1)
             {
                 DataGridViewRow selectedRow = PocetnaStranicadataGridView.SelectedRows[0];
-                
                 Kandidat KandidatZaIzmenu = new Kandidat();
                 var c = selectedRow.Cells[0].Value.ToString();
                 int.TryParse(c, out int KandidatZaIzm);
-                KandidatZaIzmenu.Id = KandidatZaIzm;
-                //KandidatZaIzmenu.Ime = selectedRow.Cells[1].Value.ToString();
-                //KandidatZaIzmenu.Prezime = selectedRow.Cells[2].Value.ToString();   
-                //KandidatZaIzmenu.JMBG = selectedRow.Cells[3].Value.ToString();
-                //var cc = selectedRow.Cells[4].Value;
-                //DateTime.TryParse(cc.ToString(), out DateTime datumRodj);
-                //KandidatZaIzmenu.DatumRodjenja = datumRodj;
-                //KandidatZaIzmenu.Email = selectedRow.Cells[5].Value.ToString();
-                //ovde treba dodati nove. Ili je moguce samo otvoriti novu formu sa svim novim podacima za kandidata gde se prilikom kliktanja na sacuvaj
-                //kandidat upisuje na mesto ovog starog u zavisnosti od Id
-
-                //using (var novaForma = new NoviKandidatForma())
-                //{
-                //    novaForma.FormClosed += (s, args) => LoadData();
-                //    novaForma.ShowDialog();
-                //}
                 
-                IzmenaKandidataForma izmenaKandidataForma = new IzmenaKandidataForma();
+                using (var context = new ApplicationDbContext())
+                {
+                    int kandID = KandidatZaIzm;
+                    var kandidat = context.Kandidati.FirstOrDefault(k=>k.Id==kandID);
+                    KandidatZaIzmenu = kandidat;
+                }
+
+               
+                IzmenaKandidataForma izmenaKandidataForma = new IzmenaKandidataForma(KandidatZaIzmenu);
                 izmenaKandidataForma.ShowDialog();
 
 
 
 
+            }
+            else {
+                MessageBox.Show("Klikni na red kandidata kojeg zelis da izmenis");
             }
         }
     }

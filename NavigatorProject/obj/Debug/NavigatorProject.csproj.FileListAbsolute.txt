@@ -32,3 +32,4 @@ C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\Navigato
 C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\Navigato.F19F5156.Up2Date
 C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.exe
 C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.pdb
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.IzmenaKandidataForma.resources

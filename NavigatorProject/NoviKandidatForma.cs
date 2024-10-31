@@ -106,7 +106,7 @@ namespace NavigatorProject
                 {
                     context.SaveChanges();
                     MessageBox.Show("Kandidat uspešno dodat u bazu.");
-                    
+                    this.Close();
                 }
                 catch (DbEntityValidationException ex)
                 {
