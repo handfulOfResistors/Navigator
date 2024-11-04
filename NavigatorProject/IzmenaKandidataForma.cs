@@ -93,8 +93,17 @@ namespace NavigatorProject
                 kandidat.Napomena = textBox6.Text;
                 kandidat.Ocena = (int)comboBox1.SelectedIndex + 1 ;
                 kandidat.Status = (StatusKandidata)comboBox2.SelectedIndex;
+                
                 kandidat.PrilogCV = cvBytes;
+                if (cvBytes == null)
+                {
+                    kandidat.PrilogCV = _kandidat.PrilogCV;
+                }
                 kandidat.Slika = pictureBytes;
+                if(pictureBytes == null)
+                {
+                    kandidat.Slika = _kandidat.Slika;   
+                }
                 kandidat.LastUpdate = DateTime.Now;
                 try
                 {
