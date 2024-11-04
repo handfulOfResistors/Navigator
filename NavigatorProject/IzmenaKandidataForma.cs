@@ -10,13 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Contexts;
+using System.IO;
 
 namespace NavigatorProject
 {
     public partial class IzmenaKandidataForma : Form
     {
         private Kandidat _kandidat;
-        public IzmenaKandidataForma(Kandidat kandidat) // Treba dodati logiku za izmenu slike i cv-a
+        public IzmenaKandidataForma(Kandidat kandidat) 
         {
 
             
@@ -31,29 +32,8 @@ namespace NavigatorProject
             textBox6.Text = _kandidat.Napomena;
             //ovde _kandidat vec sadrzi Slika i PrilogCV.
             
-
-            
-                
             
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -61,16 +41,38 @@ namespace NavigatorProject
         {
             //ovo sam slucajno dodao obrisati kasnije
         }
-
+        private byte[] pictureBytes;
+        private byte[] cvBytes;
         private void button1_Click(object sender, EventArgs e)
         {
-           //ovde treba dodati logiku da kad se doda slika, to isto promeni vrednost u _kandidat.PrilogCV.
+            
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text and PDF Files (*.txt;*.pdf)|*.txt;*.pdf|All Files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string filePath = openFileDialog.FileName;
+                cvBytes = File.ReadAllBytes(filePath);
+                MessageBox.Show("CV dodat: " + filePath);
+                //_kandidat.PrilogCV = cvBytes;
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //ovde treba dodati logiku da kad se doda slika, to isto promeni vrednost u _kandidat.Slika.
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All Files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+                pictureBytes = File.ReadAllBytes(filePath);
+                MessageBox.Show("Slika dodata: " + filePath);
+                
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -89,14 +91,33 @@ namespace NavigatorProject
                 int.TryParse(textBox5.Text, out tk);
                 kandidat.Telefon = tk;
                 kandidat.Napomena = textBox6.Text;
-                kandidat.Ocena = (int)comboBox1.SelectedIndex;
+                kandidat.Ocena = (int)comboBox1.SelectedIndex + 1 ;
                 kandidat.Status = (StatusKandidata)comboBox2.SelectedIndex;
-                
+                kandidat.PrilogCV = cvBytes;
+                kandidat.Slika = pictureBytes;
                 kandidat.LastUpdate = DateTime.Now;
-                context.SaveChanges();
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    
+                    foreach (var validationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            MessageBox.Show($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 //ovde dodati updatovanje datagridview
-                
+
                 this.Close();
             }
             

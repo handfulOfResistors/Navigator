@@ -76,11 +76,19 @@ namespace NavigatorProject
             kandidat.JMBG= JMBGBox.Text;
             kandidat.DatumRodjenja = DatumRodjenjaTimePicker.Value;
             kandidat.Email= EmailBox.Text;
-            kandidat.Telefon= int.Parse(TelefonBox.Text);
+            if (int.TryParse(TelefonBox.Text, out int telefon))
+            {
+                kandidat.Telefon = telefon;
+            }
+            else
+            {
+                MessageBox.Show("Unesite validan broj za telefon.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             kandidat.Napomena= NapomenaBox.Text;    
             kandidat.PrilogCV = cvBytes;
             kandidat.Slika = pictureBytes;
-            kandidat.Ocena = OcenacomboBox.SelectedIndex + 1; // ovo je index to je valjda ok
+            kandidat.Ocena = OcenacomboBox.SelectedIndex + 1; 
             
 
             string selectedStatus = StatuscomboBox.SelectedItem.ToString();
@@ -88,6 +96,42 @@ namespace NavigatorProject
             if (selectedStatus == "Uži krug") 
             {
                 selectedStatus = "UziKrug";
+                if (Enum.TryParse(selectedStatus, out StatusKandidata status))
+                {
+                    kandidat.Status = status;
+
+                }
+            }
+            else if (selectedStatus == "Zaposlen")
+            {
+                selectedStatus = "Zaposlen";
+                if (Enum.TryParse(selectedStatus, out StatusKandidata status))
+                {
+                    kandidat.Status = status;
+
+                }
+            }
+            else if (selectedStatus == "Kandidat")
+            {
+                selectedStatus = "Kandidat";
+                if (Enum.TryParse(selectedStatus, out StatusKandidata status))
+                {
+                    kandidat.Status = status;
+
+                }
+            }
+            else if (selectedStatus == "Kvalifikacija")
+            {
+                selectedStatus = "Kvalifikacija";
+                if (Enum.TryParse(selectedStatus, out StatusKandidata status))
+                {
+                    kandidat.Status = status;
+
+                }
+            }
+            else if (selectedStatus == "Intervju")
+            {
+                selectedStatus = "Intervju";
                 if (Enum.TryParse(selectedStatus, out StatusKandidata status))
                 {
                     kandidat.Status = status;

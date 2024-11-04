@@ -1,4 +1,5 @@
 ﻿using NavigatorProject.Model;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace NavigatorProject
 {
@@ -96,7 +98,7 @@ namespace NavigatorProject
                         File.WriteAllBytes(tempFilePath, newKand.Slika);
                         if (File.Exists(tempFilePath))
                         {
-                            MessageBox.Show("Slika je uspešno snimljena na: " + tempFilePath);
+                            
                             System.Diagnostics.Process.Start(tempFilePath); 
                         }
                         else
@@ -230,14 +232,85 @@ namespace NavigatorProject
 
                
                 IzmenaKandidataForma izmenaKandidataForma = new IzmenaKandidataForma(KandidatZaIzmenu);
-                izmenaKandidataForma.ShowDialog();
+               // izmenaKandidataForma.ShowDialog();
 
-
-
+                var selectedRoww = PocetnaStranicadataGridView.SelectedRows[0];
+                var selectedCandidate = (Kandidat)selectedRoww.DataBoundItem;
+                using (var izmenaForma = new IzmenaKandidataForma(selectedCandidate))
+                {
+                    izmenaForma.FormClosed += (s, args) => LoadData();
+                    izmenaForma.ShowDialog();
+                }
 
             }
             else {
                 MessageBox.Show("Klikni na red kandidata kojeg zelis da izmenis");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (PocetnaStranicadataGridView.SelectedRows.Count == 1)
+            {
+                DataGridViewRow selectedRow = PocetnaStranicadataGridView.SelectedRows[0];
+                int kandidatId = (int)selectedRow.Cells[0].Value;
+                DialogResult result = MessageBox.Show("Da li ste sigurni da želite da obrišete ovog kandidata?",
+                                              "Potvrda brisanja",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (var context = new ApplicationDbContext())
+                    {
+                        var kandidat = context.Kandidati.SingleOrDefault(k => k.Id == kandidatId);
+                        if(kandidat != null)
+                        {
+                            context.Kandidati.Remove(kandidat);
+                            context.SaveChanges();
+                            LoadData();
+                            MessageBox.Show("Kandidat je uspesno obrisan");
+                        }
+                    }
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Klikni na red kandidata kojeg zelis da obrises");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage())
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Kandidati");
+                for (int i = 0; i < PocetnaStranicadataGridView.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i + 1].Value = PocetnaStranicadataGridView.Columns[i].HeaderText;
+                }
+
+                // Add all rows from DataGridView to the worksheet
+                for (int rowIndex = 0; rowIndex < PocetnaStranicadataGridView.Rows.Count; rowIndex++)
+                {
+                    for (int colIndex = 0; colIndex < PocetnaStranicadataGridView.Columns.Count; colIndex++)
+                    {
+                        worksheet.Cells[rowIndex + 2, colIndex + 1].Value = PocetnaStranicadataGridView.Rows[rowIndex].Cells[colIndex].Value?.ToString() ?? "";
+                    }
+                }
+                using (var saveFileDialog = new SaveFileDialog { Filter = "Excel Files|*.xlsx", DefaultExt = "xlsx" })
+                {
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        var filePath = saveFileDialog.FileName;
+                        File.WriteAllBytes(filePath, package.GetAsByteArray());
+                        MessageBox.Show("Podaci su uspešno izvezeni u Excel dokument.", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
     }

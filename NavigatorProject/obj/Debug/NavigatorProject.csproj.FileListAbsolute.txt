@@ -33,3 +33,18 @@ C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\Navigato
 C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.exe
 C:\Users\PC\source\repos\Navigator\Navigator\NavigatorProject\obj\Debug\NavigatorProject.pdb
 C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\obj\Debug\NavigatorProject.IzmenaKandidataForma.resources
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EPPlus.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Buffers.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Memory.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\EPPlus.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Buffers.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Memory.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Nemanja Pesic\source\repos\NavigatorProject\NavigatorProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

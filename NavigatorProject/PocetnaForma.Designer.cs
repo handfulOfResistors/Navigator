@@ -36,8 +36,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DugmeZaPretragubutton = new System.Windows.Forms.Button();
             this.TekstZaPretragutextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.IzmeniKandidataButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kandidatsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PocetnaStranicadataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,7 +47,7 @@
             // 
             // DodajKandidataButton
             // 
-            this.DodajKandidataButton.Location = new System.Drawing.Point(1106, 529);
+            this.DodajKandidataButton.Location = new System.Drawing.Point(279, 588);
             this.DodajKandidataButton.Name = "DodajKandidataButton";
             this.DodajKandidataButton.Size = new System.Drawing.Size(185, 79);
             this.DodajKandidataButton.TabIndex = 0;
@@ -63,7 +65,7 @@
             this.PocetnaStranicadataGridView.Location = new System.Drawing.Point(51, 46);
             this.PocetnaStranicadataGridView.Name = "PocetnaStranicadataGridView";
             this.PocetnaStranicadataGridView.RowHeadersWidth = 51;
-            this.PocetnaStranicadataGridView.Size = new System.Drawing.Size(1240, 396);
+            this.PocetnaStranicadataGridView.Size = new System.Drawing.Size(1250, 396);
             this.PocetnaStranicadataGridView.TabIndex = 1;
             this.PocetnaStranicadataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PocetnaStranicadataGridView_CellClick);
             // 
@@ -78,7 +80,7 @@
             // 
             // DugmeZaPretragubutton
             // 
-            this.DugmeZaPretragubutton.Location = new System.Drawing.Point(1216, 16);
+            this.DugmeZaPretragubutton.Location = new System.Drawing.Point(1226, 16);
             this.DugmeZaPretragubutton.Name = "DugmeZaPretragubutton";
             this.DugmeZaPretragubutton.Size = new System.Drawing.Size(75, 23);
             this.DugmeZaPretragubutton.TabIndex = 3;
@@ -88,20 +90,20 @@
             // 
             // TekstZaPretragutextBox
             // 
-            this.TekstZaPretragutextBox.Location = new System.Drawing.Point(1106, 16);
+            this.TekstZaPretragutextBox.Location = new System.Drawing.Point(1116, 16);
             this.TekstZaPretragutextBox.Name = "TekstZaPretragutextBox";
             this.TekstZaPretragutextBox.Size = new System.Drawing.Size(100, 20);
             this.TekstZaPretragutextBox.TabIndex = 4;
             // 
-            // button1
+            // IzmeniKandidataButton
             // 
-            this.button1.Location = new System.Drawing.Point(502, 529);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 79);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Izmeni Kandidata";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.IzmeniKandidataButton.Location = new System.Drawing.Point(506, 588);
+            this.IzmeniKandidataButton.Name = "IzmeniKandidataButton";
+            this.IzmeniKandidataButton.Size = new System.Drawing.Size(177, 79);
+            this.IzmeniKandidataButton.TabIndex = 5;
+            this.IzmeniKandidataButton.Text = "Izmeni Kandidata";
+            this.IzmeniKandidataButton.UseVisualStyleBackColor = true;
+            this.IzmeniKandidataButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox1
             // 
@@ -112,13 +114,35 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(742, 588);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(177, 77);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Obrisi Kandidata";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1198, 449);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Preuzmi XLSX";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // PocetnaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 691);
+            this.ClientSize = new System.Drawing.Size(1355, 691);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.IzmeniKandidataButton);
             this.Controls.Add(this.TekstZaPretragutextBox);
             this.Controls.Add(this.DugmeZaPretragubutton);
             this.Controls.Add(this.label1);
@@ -158,8 +182,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button DugmeZaPretragubutton;
         private System.Windows.Forms.TextBox TekstZaPretragutextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button IzmeniKandidataButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
