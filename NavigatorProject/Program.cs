@@ -8,9 +8,6 @@ namespace NavigatorProject
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -22,8 +19,3 @@ namespace NavigatorProject
     }
 }
 
-
-
-//Dodatni Linkovi popraviti. Ne postoji u bazi a u modelu ga ima
-//da se pokrene LoadData() nakon izvrsetka izmeni kandidata
-//cv i slika kod izmeni kandidata proveriti i doraditi da radi

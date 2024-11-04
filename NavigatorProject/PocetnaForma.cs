@@ -83,7 +83,6 @@ namespace NavigatorProject
             Kandidat newKand;
             var kandidat = PocetnaStranicadataGridView.Rows[e.RowIndex].DataBoundItem as Kandidat;
             int kandId = kandidat.Id;
-            ////////////////////////////////////////Klik na sliku radi kako sam zamislio
             if (e.ColumnIndex == 10)
             {
                 using (var context = new ApplicationDbContext())
@@ -208,12 +207,7 @@ namespace NavigatorProject
                 }
 
             }
-            
-            
-
-
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             if(PocetnaStranicadataGridView.SelectedRows.Count == 1)
@@ -232,7 +226,7 @@ namespace NavigatorProject
 
                
                 IzmenaKandidataForma izmenaKandidataForma = new IzmenaKandidataForma(KandidatZaIzmenu);
-               // izmenaKandidataForma.ShowDialog();
+               
 
                 var selectedRoww = PocetnaStranicadataGridView.SelectedRows[0];
                 var selectedCandidate = (Kandidat)selectedRoww.DataBoundItem;
@@ -294,7 +288,6 @@ namespace NavigatorProject
                     worksheet.Cells[1, i + 1].Value = PocetnaStranicadataGridView.Columns[i].HeaderText;
                 }
 
-                // Add all rows from DataGridView to the worksheet
                 for (int rowIndex = 0; rowIndex < PocetnaStranicadataGridView.Rows.Count; rowIndex++)
                 {
                     for (int colIndex = 0; colIndex < PocetnaStranicadataGridView.Columns.Count; colIndex++)

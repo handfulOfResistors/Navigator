@@ -30,7 +30,6 @@ namespace NavigatorProject
             textBox4.Text = _kandidat.Email;
             textBox5.Text = _kandidat.Telefon.ToString();
             textBox6.Text = _kandidat.Napomena;
-            //ovde _kandidat vec sadrzi Slika i PrilogCV.
             
             
         }
@@ -39,7 +38,6 @@ namespace NavigatorProject
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //ovo sam slucajno dodao obrisati kasnije
         }
         private byte[] pictureBytes;
         private byte[] cvBytes;
@@ -56,7 +54,7 @@ namespace NavigatorProject
                 string filePath = openFileDialog.FileName;
                 cvBytes = File.ReadAllBytes(filePath);
                 MessageBox.Show("CV dodat: " + filePath);
-                //_kandidat.PrilogCV = cvBytes;
+                
             }
 
         }
@@ -77,8 +75,6 @@ namespace NavigatorProject
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //ovde treba dodati logiku za cuvanje izmenjenog kandidata
-            //ovde uzeti polje iz baze: 
             using (var context = new ApplicationDbContext())
             {
                 var kandidat = context.Kandidati.FirstOrDefault(k => k.Id == _kandidat.Id);
@@ -124,8 +120,6 @@ namespace NavigatorProject
                 {
                     MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                //ovde dodati updatovanje datagridview
 
                 this.Close();
             }
